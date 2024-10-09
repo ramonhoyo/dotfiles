@@ -1,6 +1,19 @@
+let mapleader=" "
+
 set number relativenumber
 set commentary
 set argtextobj
+set easymotion
+
+
+map <leader>s <Action>(SelectInProjectView)
+nmap <leader>t <Action>(ActivateTerminalToolWindow)
+nmap <Leader>w <action>(ActiveToolwindowGroup)
+nmap <leader>x <Action>(HideAllWindows)
+nmap <leader>s <Action>(ShowUsages)
+nmap <leader>fr <Action>(RecentFiles)
+nmap <leader><leader> <Action>(GotoFile)
+
 
 // Move between issues in current file:
 nmap ]e <Action>(GotoNextError)
