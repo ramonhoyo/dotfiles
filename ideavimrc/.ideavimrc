@@ -1,0 +1,12 @@
+set number relativenumber
+set commentary
+set argtextobj
+
+// Move between issues in current file:
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPreviousError)
+nmap gr <Action>(FindUsages)
+
+
+
+
