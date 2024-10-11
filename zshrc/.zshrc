@@ -24,3 +24,5 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export ANDROID_ADB_SERVER_PORT=6789
+
+alias ll="ls -la"
