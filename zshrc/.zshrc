@@ -26,3 +26,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export ANDROID_ADB_SERVER_PORT=6789
 
 alias ll="ls -la"
+alias electrum_tesnet="open -n /Applications/Electrum.app --args --testnet"
