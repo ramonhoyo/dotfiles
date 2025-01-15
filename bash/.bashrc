@@ -16,11 +16,10 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
 # Startship
 eval "$(starship init bash)"
 
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
@@ -44,4 +43,11 @@ export PATH="$PATH:/usr/local/go/bin"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-alias kubectl="minikube kubectl"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+alias oci='docker run --rm -it -v "$HOME/.oci:/oracle/.oci" oci'
+source <(kubectl completion bash)
+. "$HOME/.cargo/env"
+
+export PATH="$(yarn global bin):$PATH"
+export QT_QPA_PLATFORM=xcb
