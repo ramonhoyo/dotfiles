@@ -58,3 +58,6 @@ vim.filetype.add({
     templ = "templ",
   },
 })
+--
+-- require("mason").setup()
+-- require("mason-lspconfig").setup()
