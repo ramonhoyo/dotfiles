@@ -3,3 +3,5 @@
 -- Add any additional options here
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
+
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
