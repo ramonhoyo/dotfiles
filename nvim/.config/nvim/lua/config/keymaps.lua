@@ -3,7 +3,6 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader><F3>", vim.cmd.UndotreeToggle)
-vim.keymap.set("n", "<leader><F2>", vim.cmd.Neotree)
 
 vim.keymap.set("n", "<F5>", function()
   require("dap").continue()
