@@ -6,11 +6,22 @@ return {
   opts = {
     -- add any opts here
     provider = "gemini",
-    auto_suggestions_provider = "gemini",
+    auto_suggestions_provider = "deepseek",
+    gemini = {
+      model = "gemini-2.0-flash",
+    },
+    vendors = {
+      deepseek = {
+        __inherited_from = "openai",
+        api_key_name = "DEEPSEEK_API_KEY",
+        endpoint = "https://api.deepseek.com",
+        model = "deepseek-coder",
+      },
+    },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
-  -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
+  -- build = "powershell -ExecutionPoligemini-2.0-flashcy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
   dependencies = {
     "stevearc/dressing.nvim",
     "nvim-lua/plenary.nvim",
