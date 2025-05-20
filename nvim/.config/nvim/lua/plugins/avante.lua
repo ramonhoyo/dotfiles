@@ -6,17 +6,9 @@ return {
   opts = {
     -- add any opts here
     provider = "gemini",
-    auto_suggestions_provider = "deepseek",
+    auto_suggestions_provider = "gemini",
     gemini = {
       model = "gemini-2.0-flash",
-    },
-    vendors = {
-      deepseek = {
-        __inherited_from = "openai",
-        api_key_name = "DEEPSEEK_API_KEY",
-        endpoint = "https://api.deepseek.com",
-        model = "deepseek-coder",
-      },
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
