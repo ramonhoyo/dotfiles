@@ -11,6 +11,7 @@ Before using these dotfiles, make sure you have the following tools installed:
 - **[Starship](https://github.com/starship/starship)** - Cross-shell prompt
 - **[FZF](https://github.com/junegunn/fzf)** - Command-line fuzzy finder
 - **[Alacritty](https://github.com/alacritty/alacritty)** - GPU-accelerated terminal emulator
+- **[Stow](https://github.com/aspiers/stow)** - Symlink farm manager (recommended for managing dotfiles)
 
 ## What's Included
 
@@ -27,6 +28,18 @@ This repository contains configuration files for:
 
 1. Clone this repository to your preferred location
 2. Install the prerequisites listed above
-3. Symlink or copy the configuration files to their respective locations in your home directory
+3. Use Stow to symlink the configuration files:
+   ```bash
+   # For all configurations
+   stow */
+   
+   # Or for individual configurations
+   stow nvim
+   stow tmux
+   stow alacritty
+   # etc.
+   ```
+   
+   Alternatively, you can manually symlink or copy the configuration files to their respective locations in your home directory.
 
 Each tool's configuration is organized in its own directory for easy management.
